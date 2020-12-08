@@ -46,7 +46,7 @@ function startGame() {
             },500);
         }
         
-        /* every YOU PRESS THE SPACEBAR - jump function is execuded*/
+        //every YOU PRESS THE SPACEBAR - jump function is execuded. Found via stackoverflow.com -Jfiddlejs 
         document.body.onkeyup = function(e){
             if(e.keyCode == 32){
                 jump();
@@ -77,9 +77,11 @@ function startGame() {
         },10);
         
         
-        /*play again button (refresh the page)*/
+        //play again button (refresh the page)
         var refresh_btn = document.getElementById("refresh_btn");
         
+
+        //Refresh button
         refresh_btn.onclick = function () { 
             window.location.reload()
         }
