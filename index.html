@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flobot Adventure</title>
+    <link rel="stylesheet" href="css/running.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<div class="game__container">
+        <div id="score" class="game__score hidden">
+            <span id="retro__score" class="blinking hidden">uh oh :( try again, your score is:"</span> <!--to be added later-->
+            <span id="retro__intro" class="blinking gamer__intro hidden">Welcome to Flobot's Adventure</span><!--Custom font imported via https://gumroad.com/l/TEEfS-->
+        </div>
+        <!--Div containing entire game-->
+    <div id="game" class="game">
+        <!--Character-->
+        <div id="character">
+            <div class="CharacterRunning">
+                 <!--Sprite animated character inspired by Youtube tutorial https://www.youtube.com/watch?v=ekI7vjkFrGA&ab_channel=DrewConley-->
+                <img id="CharacterRunning" class="Character_spritesheet pixelart face-right" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/21542/DemoRpgCharacter.png" alt="">
+            </div>
+
+        </div>
+        <div>
+            <!--Block thats running across, I turned it into a bucket of pixel lava. Hot, be careful!!-->
+            <img  id="block" class="game__stop" src="https://i.pinimg.com/originals/62/7b/95/627b95d720a235b55fe27f57e159b5d6.png" alt="">
+
+        </div>
+        
+    </div>
+</div>
+<!--Bonus Content for game-->
+<div class="game__below">
+    <div class="game__title">
+        <h1>Welcome to Pixel Jump</h1>
+        <p>Help Flobot explore without hitting a bucket of lava!!!</p>
+    </div>
+    <div class="game__start" id="start_btn">
+        <button id="start_btn" type="submit">
+            Start Game
+        </button>
+    </div>
+    <div class="game__refresh " id="refresh_btn">
+        <button class="hidden" id="P_btn" type="submit">
+            Play Again
+        </button>
+    </div>
+</div>
+
+        
+
+    
+</body>
+<script src="js/script.js"></script>
+</html>

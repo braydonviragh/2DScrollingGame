@@ -1,0 +1,147 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.game__container {
+  display: flex;
+  justify-content: center;
+}
+.game__below {
+  margin: 0 auto;
+  text-align: center;
+}
+#game {
+  width: 500px;
+  height: 200px;
+  border: 1px solid black;
+  background: url(https://blenderartists.org/uploads/default/original/4X/7/e/2/7e2d7bea4ac21388c4a96e1371f375c4ce00094b.jpg);
+}
+
+#character {
+  width: 20px;
+  height: 50px;
+  position: relative;
+  top: 43px;
+}
+
+/*animation for character jump*/
+.animate {
+  animation: jump 0.5s;
+}
+
+@keyframes jump {
+  0% {
+    top: 43px;
+  }
+
+  50% {
+    /* 30% - 70% because character needs to hover a little bit in the air */
+    top: -7px;
+  }
+  75% {
+    top: -7px;
+  }
+  100% {
+    top: 43px;
+  }
+}
+#block {
+  width: 50px;
+  height: 50px;
+  top: 49px;
+  position: relative;
+  /*slide animation below */
+  animation: block 1s infinite linear;
+}
+
+/*Animation for block sliding across */
+@keyframes block {
+  0% {
+    left: 480px;
+  }
+  100% {
+    left: -25px;
+  }
+}
+.hideBtn {
+  opacity: 0;
+}
+#refresh_btn button {
+  display: inline-block;
+  margin-top: 2em;
+  padding: 1em;
+  font-size: 2em;
+  border-radius: 8px;
+  background-color: green;
+}
+
+.game__start button {
+  padding: 1em;
+  font-size: 2em;
+  align-items: center;
+  border-radius: 8px;
+  background-color: pink;
+}
+.game__title {
+  padding-bottom: 2em;
+}
+.game__loser {
+  padding: 1em;
+  font-size: 2em;
+  border-radius: 8px;
+  background-color: hotpink;
+  position: absolute;
+  top: 50px;
+  left: 100px;
+}
+.hidden {
+  opacity: 0;
+}
+.game__stop {
+  animation: none;
+  display: none;
+}
+
+.blinking {
+  animation: blinkingText 2.5s infinite;
+}
+@keyframes blinkingText {
+  0% {
+    color: #000;
+  }
+  49% {
+    color: #000;
+  }
+  60% {
+    color: transparent;
+  }
+  99% {
+    color: transparent;
+  }
+  100% {
+    color: #000;
+  }
+}
+@font-face {
+  font-family: retro;
+  src: url(fonts/Sabo-Regular.otf);
+}
+
+.game__score span {
+  font-family: retro;
+  background-color: yellow;
+  position: absolute;
+  left: 470px;
+  top: 70px;
+  font-size: 16px;
+  opacity: 1;
+}
+.gamer__welcome span {
+  font-family: retro;
+  opacity: 1;
+  background-color: yellow;
+  position: absolute;
+  left: 470px;
+  top: 70px;
+  font-size: 16px;
+}
