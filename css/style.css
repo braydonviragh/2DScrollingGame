@@ -6,6 +6,7 @@
 .game__container {
   display: flex;
   justify-content: center;
+  position: relative;
 }
 .game__below {
   margin: 0 auto;
@@ -128,7 +129,7 @@
   font-family: "VT323", monospace;
   background-color: yellow;
   position: absolute;
-  left: 825px;
+  left: 510px;
   top: 70px;
   font-size: 24px;
   opacity: 1;
@@ -138,7 +139,7 @@
   opacity: 1;
   background-color: yellow;
   position: absolute;
-  left: 470px;
+  left: 700px;
   top: 70px;
   font-size: 16px;
 }
