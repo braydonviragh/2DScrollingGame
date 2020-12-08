@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -122,22 +123,18 @@
     color: #000;
   }
 }
-@font-face {
-  font-family: retro;
-  src: url(fonts/Sabo-Regular.otf);
-}
 
 .game__score span {
-  font-family: retro;
+  font-family: "VT323", monospace;
   background-color: yellow;
   position: absolute;
-  left: 470px;
+  left: 825px;
   top: 70px;
-  font-size: 16px;
+  font-size: 24px;
   opacity: 1;
 }
 .gamer__welcome span {
-  font-family: retro;
+  font-family: "VT323", monospace;
   opacity: 1;
   background-color: yellow;
   position: absolute;
