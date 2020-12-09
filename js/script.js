@@ -64,7 +64,7 @@ function startGame() {
             var runningCharacter = document.getElementById("CharacterRunning")
             var characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
             var blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
-            if(blockLeft<20 && blockLeft >0 && characterTop>=43) {
+            if(blockLeft<30 && blockLeft >0 && characterTop>=43) {
                 block.classList.add("game__stop");
                 runningCharacter.classList.remove("face-right")
                 finalScore.classList.remove("hidden");
