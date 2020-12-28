@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flobot Adventure</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/gameStyle.css">
+    <link rel="stylesheet" href="css/tinyAnimationFigure.css">
+
+</head>
+<body>
+    <div class="body__container">
+        <header>
+            <div class="header__container">
+                <div class="header__logo">
+                   <a href="#"><h1>Flo</h1></a> 
+                </div>
+                
+                
+        
+            </div>
+            <!--Vertial Nav Bar-->
+        </header>
+    <div class="space">
+
+    </div>
+    
+<div class="game__container">
+        <!--Div containing entire game-->
+    <div id="game" class="game">
+        <div id="score" class="game__score">
+            <span id="retro__score" class="blinking hidden"></span> <!--to be added later-->
+            <span id="retro__intro" class="blinking gamer__intro hidden">Welcome to Flobot's Adventure</span>
+        </div>
+        <div class="title">
+            <div class="game__title">
+                <h1>Flobot's Adventure!</h1>
+            </div>
+        </div>
+        <!--Character-->
+        <div id="character">
+            <div class="CharacterRunning"> <!--ad-->
+                 <!--Sprite animated character inspired by Youtube tutorial https://www.youtube.com/watch?v=ekI7vjkFrGA&ab_channel=DrewConley-->
+                <img id="CharacterRunning" class="Character_spritesheet pixelart face-right" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/21542/DemoRpgCharacter.png" alt="">
+            </div>
+
+        </div>
+        <div>
+            <!--Block thats running across, I turned it into a bucket of pixel lava. Hot, be careful!!-->
+            <img  id="block" class="game__stop" src="images/rock.png" alt="obsticle">
+        </div>
+        <!--Coin added to keep score-->
+        <div id="coinContainer">
+            <img id="coin" class="game__stop coinMove" src="images/coin.png" alt="coin">
+        </div>
+        <div id="bird">
+            <div id="birdContainer" class="birdFlying birdMove"> <!--ad-->
+                <img id="birdFlying" class="game__stop bird_spritesheet pixelart" src="images/BirdSprite.png" alt="">
+            </div>
+        
+        </div>
+            <div class="game__start">
+            </div>
+            <div class="game__below">
+                <div class="game__info">
+                    <p>Flobot is out exploring for coins !</p>
+                    <p>Avoid birds and rocks!, collect coins!</p>
+                    <br>
+                    <h3>PRESS SPACEBAR TO JUMP</h3>
+                    <button id="start_btn" class="game__start" type="submit">
+                        Start Game
+                    </button>
+                </div>
+            </div>
+            <div class="score">
+                <h3>Your Score:</h3><span id="score"></span>
+            </div>
+</div>
+<!--Bonus Content for game-->
+
+    </div>
+</div>
+
+<div class="square">
+
+</div>
+<div id="gameOver" class="gameOver hidden">
+    <h2>Uh oh, Flobot got bumped, please play again!</h2>
+    <h3>Your Score:</h3><span id="scoreOver"></span>
+    <br>
+    <br>
+    <div class="playAgain">
+        <h3>Play Again ?</h3><h3 class="playOption" id="yesBtn"> Yes</h3><h3 class="playOption" id="noBtn">No</h3>
+    </div>
+</div>
+
+
+        
+    <div class="mobile__msg">
+        <h2>Mobile Version Coming 2021</h2>
+    </div>
+</body>
+
+<script src="js/gameScript.js"></script>
+</html>

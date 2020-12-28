@@ -1,144 +1,178 @@
-@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,500;1,300&display=swap");
 * {
   padding: 0;
-  margin: 0;
-}
-.game__container {
-  display: flex;
-  justify-content: center;
-  position: relative;
-}
-.game__below {
   margin: 0 auto;
-  text-align: center;
+  box-sizing: border-box;
+  font-family: "Montserrat Alternates", sans-serif;
 }
-#game {
-  width: 500px;
-  height: 200px;
-  border: 1px solid black;
-  background: url(https://blenderartists.org/uploads/default/original/4X/7/e/2/7e2d7bea4ac21388c4a96e1371f375c4ce00094b.jpg);
+h1 {
+  font-weight: bold;
+  font-size: 2.2rem;
 }
-
-#character {
-  width: 20px;
-  height: 50px;
-  position: relative;
-  top: 43px;
-}
-
-/*animation for character jump*/
-.animate {
-  animation: jump 0.5s;
-}
-
-@keyframes jump {
-  0% {
-    top: 43px;
-  }
-
-  50% {
-    /* 30% - 70% because character needs to hover a little bit in the air */
-    top: -7px;
-  }
-  75% {
-    top: -7px;
-  }
-  100% {
-    top: 43px;
-  }
-}
-#block {
-  width: 50px;
-  height: 50px;
-  top: 49px;
-  position: relative;
-  /*slide animation below */
-  animation: block 1s infinite linear;
-}
-
-/*Animation for block sliding across */
-@keyframes block {
-  0% {
-    left: 480px;
-  }
-  100% {
-    left: 0px;
-  }
-}
-.hideBtn {
-  opacity: 0;
-}
-#refresh_btn button {
-  display: inline-block;
-  margin-top: 2em;
-  padding: 1em;
-  font-size: 2em;
-  border-radius: 8px;
-  background-color: green;
-}
-
-.game__start button {
-  padding: 1em;
-  font-size: 2em;
-  align-items: center;
-  border-radius: 8px;
-  background-color: pink;
-}
-.game__title {
-  padding-bottom: 2em;
-}
-.game__loser {
-  padding: 1em;
-  font-size: 2em;
-  border-radius: 8px;
-  background-color: hotpink;
-  position: absolute;
-  top: 50px;
-  left: 100px;
+body,
+section,
+main,
+header,
+footer {
+  font-family: "Montserrat", sans-serif;
+  background: #131313;
+  color: #fff;
+  width: 100%;
 }
 .hidden {
-  opacity: 0;
+  display: none;
 }
-.game__stop {
-  animation: none;
+.header__container {
+  width: 70px;
+  height: 100%;
+  background-color: #0f0f0f;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  z-index: 999;
+  left: 0;
+  text-align: center;
+  margin: 0 auto;
+}
+.header__container img {
+  height: 40px;
+  width: 45px;
+  margin-top: 12px;
+  padding-right: 10px;
+}
+.header__container h1 {
+  height: 40px;
+  width: 45px;
+  margin-top: 12px;
+  padding-right: 10px;
+  color: #bc13fe;
+  text-align: center;
+}
+
+.header__home,
+.header__services,
+.header__about,
+.header__contact {
+  background-color: transparent;
+  cursor: pointer;
+  width: 70px;
+  height: 70px;
+  text-align: center;
+}
+.header__contact {
+  background-color: transparent;
+  cursor: pointer;
+  width: 70px;
+  height: 70px;
+  margin-right: 10px;
+}
+.header__icons {
+  position: absolute;
+  top: 250px;
+  text-align: center;
+}
+.main__container,
+.services__container,
+.about__container,
+.contact__container {
+  position: absolute;
+  top: 180px;
+  left: 120px;
+}
+
+.main__container h1:first-child {
+  margin-bottom: 20px;
+  z-index: -1;
+  animation: top 0.5s linear;
+  border-top: 3px solid #bc13fe;
+}
+.main__container h1:nth-child(2) {
+  margin-bottom: 25px;
+  animation: left 0.8s linear;
+}
+.main__container h1:nth-child(3) {
+  font-size: 1.2rem;
+  color: #999;
+  animation: bottom 0.5s linear;
+}
+.main__container button {
+  margin-top: 40px;
+  width: 130px;
+  height: 40px;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  background-color: #bc13fe;
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+  animation: bottom 0.7s linear;
+}
+
+/*animations*/
+@keyframes top {
+  0% {
+    transform: translateY(-300%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes bottom {
+  5% {
+    transform: translateY(300%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes left {
+  0% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.about__para {
+  width: 600px;
+}
+
+.header__container img:hover {
+  animation: rotate 1s linear;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.mobile__msg {
   display: none;
 }
 
-.blinking {
-  animation: blinkingText 2.5s infinite;
-}
-@keyframes blinkingText {
-  0% {
-    color: #000;
+@media only screen and (max-width: 800px) {
+  .body__container {
+    opacity: 0;
   }
-  49% {
-    color: #000;
+  .mobile__msg {
+    font-size: 1.25em;
+    position: absolute;
+    display: block;
+    text-align: center;
   }
-  60% {
-    color: transparent;
+  .mobile__msg h3 {
+    text-transform: uppercase;
+    font-family: "VT323", monospace;
+    color: #fff;
+    margin-left: 20px;
   }
-  99% {
-    color: transparent;
-  }
-  100% {
-    color: #000;
-  }
-}
-
-.square {
-  width: 50px;
-  height: 50px;
-  background-color: red;
-  position: absolute;
-  top: 49px;
-}
-
-#retro__intro {
-  font-family: "VT323", monospace;
-  opacity: 1;
-  background-color: yellow;
-  font-size: 24px;
-  position: absolute;
-  top: 75px;
-  left: 500px;
 }

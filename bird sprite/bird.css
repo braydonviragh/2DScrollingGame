@@ -1,0 +1,36 @@
+/*Root of all pixel sizing*/
+:root {
+  --pixel-size: 3;
+}
+/*making pixel sprite sheet larger*/
+
+/*bird animation*/
+.birdFlying {
+  width: calc(16px * var(--pixel-size));
+  height: calc(13px * var(--pixel-size));
+  overflow: hidden;
+  position: relative;
+  margin: 4em auto;
+}
+
+/*crops which bird animation we want from sprite sheet*/
+.bird_spritesheet {
+  animation: moveSpritesheet 0.5s steps(4) infinite;
+  width: calc(128px * var(--pixel-size));
+  position: absolute;
+  top: calc(-18px * var(--pixel-size));
+}
+
+/*fixes the blurry image */
+.pixelart {
+  image-rendering: pixelated;
+}
+/*animation for moving*/
+@keyframes moveSpritesheet {
+  from {
+    transform: translate3d(0px, 0, 0);
+  }
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
+}

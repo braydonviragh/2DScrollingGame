@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flobot Adventure</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animationFigure.css">
+
+</head>
+<body>
+    <div class="header__container">
+        <div class="header__icons">
+            <div class="header__home">
+               <a href="indexl.html"> <svg xmlns="http://www.w3.org/2000/svg" class="homeIcon" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#8468be" fill="none" stroke-linecap="round" stroke-linejoin="round" style="/* stroke: rgb(21, 220, 247); */"><path stroke="none" d="M0 0h24v24H0z"></path><polyline points="5 12 3 12 12 3 21 12 19 12"></polyline><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7"></path><path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6"></path> </svg></a>
+            </div>
+
+            <div class="header__services" id="header__services">
+               <a href="services.html"> <svg xmlns="http://www.w3.org/2000/svg" class="skillsIcon" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5"  fill="none" stroke-linecap="round" stroke-linejoin="round" ><path stroke="none" d="M0 0h24v24H0z"></path><polyline points="7 8 3 12 7 16"></polyline><polyline points="17 8 21 12 17 16"></polyline><line x1="14" y1="4" x2="10" y2="20"></line></svg></a>
+            </div>
+
+            <div class="header__game">
+               <a href="game.html"> <svg xmlns="http://www.w3.org/2000/svg" class="aboutIcon" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5"  fill="none" stroke-linecap="round" stroke-linejoin="round" ><path stroke="none" d="M0 0h24v24H0z"></path><circle cx="12" cy="7" r="4"></circle><path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"></path></svg></a>
+            </div>
+            <div class="header__contact">
+                <a href="contact.html"><svg xmlns="http://www.w3.org/2000/svg" class="workIcon" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5"  fill="none" stroke-linecap="round" stroke-linejoin="round" ><path stroke="none" d="M0 0h24v24H0z"></path><path d="M5 4h4l3 3h7a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-11a2 2 0 0 1 2 -2"></path></svg></a>
+            </div>
+        </div>
+        
+
+    </div>
+<div class="game__container">
+        <!--Div containing entire game-->
+    <div id="game" class="game">
+        <div id="score" class="game__score hidden">
+            <span id="retro__score" class="blinking hidden"></span> <!--to be added later-->
+            <span id="retro__intro" class="blinking gamer__intro hidden">Welcome to Flobot's Adventure</span><!--Custom font imported via https://gumroad.com/l/TEEfS-->
+        </div>
+        <!--Character-->
+        <div id="character">
+            <div class="CharacterRunning"> <!--ad-->
+                 <!--Sprite animated character inspired by Youtube tutorial https://www.youtube.com/watch?v=ekI7vjkFrGA&ab_channel=DrewConley-->
+                <img id="CharacterRunning" class="Character_spritesheet pixelart face-right" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/21542/DemoRpgCharacter.png" alt="">
+            </div>
+
+        </div>
+        <div>
+            <!--Block thats running across, I turned it into a bucket of pixel lava. Hot, be careful!!-->
+            <img  id="block" class="game__stop" src="https://i.pinimg.com/originals/62/7b/95/627b95d720a235b55fe27f57e159b5d6.png" alt="">
+
+        </div>
+        
+    </div>
+</div>
+<!--Bonus Content for game-->
+<div class="game__below">
+    <div class="game__title">
+        <h1>Welcome to Pixel Jump</h1>
+        <p>Help Flobot explore without hitting a bucket of lava!!!</p>
+        <h3>PRESS SPACEBAR TO JUMP</h3>
+    </div>
+    <div class="game__start" id="start_btn">
+        <button id="start_btn" type="submit">
+            Start Game
+        </button>
+    </div>
+    <div class="game__refresh " id="refresh_btn">
+        <button class="hidden" id="P_btn" type="submit">
+            Play Again
+        </button>
+    </div>
+</div>
+
+<div class="square">
+
+</div>
+        
+
+    
+</body>
+<script src="js/script.js"></script>
+</html>
